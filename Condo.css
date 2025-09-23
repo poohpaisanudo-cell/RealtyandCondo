@@ -1,45 +1,15 @@
- body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(63, 164, 253);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .login-container {
-        background-color: white;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 300px;
-    }
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .inpust-group {
-        margin-bottom: 15px;
-    }
-    .inpust-group label {
-        font-size: 14px;
-        color: rgb(63, 164, 253);    
-    }
-    .inpust-group input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 16px;
-        border: 1px solid #3e82da;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .btn{
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(63, 164, 253);
-        border: none;
-        border-radius: 4px;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-    }
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  position: fixed; /* ตรึงตำแหน่ง */
+  top: 0;          /* อยู่ด้านบน */
+  left: 0;
+  width: 100%;     /* กว้างเต็มหน้าจอ */
+  background-color: #4F6F52;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* เงาเล็กๆ */
+  z-index: 1000;   /* อยู่เหนือเนื้อหา */
+  padding: 10px 20px;
+}
