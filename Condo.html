@@ -8,10 +8,78 @@
 </head>
 <body>
 <header class="header">
-  <nav>
-  </nav>
+  <div class="container header-inner">
+    <a class="brand" href="#">HomeLink</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="menu" class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">For Sale</a></li>
+        <li><a href="#">For Rent</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>ค้นหาคอนโดในฝันของคุณ</h1>
+        <p>เลือกทำเล ราคา และขนาดที่ตรงกับความต้องการ</p>
+      </div>
+      <form id="searchForm" class="search" role="search">
+        <input id="searchInput" type="search" placeholder="ค้นหา: ชื่อโครงการ, ทำเล, รหัส" aria-label="Search properties">
+        <select id="filterType" aria-label="Property type">
+          <option value="">ทั้งหมด</option>
+          <option value="sale">ขาย</option>
+          <option value="rent">เช่า</option>
+        </select>
+        <button type="submit">ค้นหา</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="listings container">
+    <h2>ประกาศล่าสุด</h2>
+    <div id="cards" class="cards">
+      <!-- Sample cards - in real app these would be rendered dynamically -->
+      <article class="card" data-type="sale">
+        <img src="https://via.placeholder.com/400x240?text=Condo+1" alt="Condo 1">
+        <div class="card-body">
+          <h3>Condo Prime</h3>
+          <p class="meta">สุขุมวิท — 2 ห้องนอน — 65 ตร.ม.</p>
+          <p class="price">฿4,500,000</p>
+        </div>
+      </article>
+
+      <article class="card" data-type="rent">
+        <img src="https://via.placeholder.com/400x240?text=Condo+2" alt="Condo 2">
+        <div class="card-body">
+          <h3>City View Residence</h3>
+          <p class="meta">สีลม — 1 ห้องนอน — 35 ตร.ม.</p>
+          <p class="price">฿22,000 / เดือน</p>
+        </div>
+      </article>
+
+      <article class="card" data-type="sale">
+        <img src="https://via.placeholder.com/400x240?text=Condo+3" alt="Condo 3">
+        <div class="card-body">
+          <h3>Lakefront Condo</h3>
+          <p class="meta">รัชดา — 1 ห้องนอน — 45 ตร.ม.</p>
+          <p class="price">฿3,200,000</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 HomeLink — เชื่อมต่อคุณกับที่อยู่อาศัยที่ใช่</p>
+  </div>
+</footer>
 
     <script src="Condo.js"></script>
 </body>
