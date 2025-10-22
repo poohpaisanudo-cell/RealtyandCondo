@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>homelink — ซื้อเช่า ปล่อยเช่า ปล่อยขาย</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>homelink</h1>
+        <p class="tag">ซื้อ • เช่า • ปล่อยเช่า • ปล่อยขาย</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="search">
+        <input id="q" placeholder="ค้นหา (ตัวอย่าง: คอนโด, บ้าน, เช่า)" />
+        <select id="type">
+          <option value="">ทุกประเภท</option>
+          <option value="ขาย">ขาย</option>
+          <option value="เช่า">เช่า</option>
+        </select>
+        <button id="searchBtn">ค้นหา</button>
+      </section>
+
+      <section id="listings" class="listings"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© homelink 2025 —</div>
+    </footer>
+
+    <script src="/app.js"></script>
+    <!-- gallery modal -->
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+      <button id="galleryClose" class="gallery-close">✕</button>
+      <div class="gallery-content">
+        <button id="prevBtn" class="gallery-nav">◀</button>
+        <img id="galleryImg" src="" alt="" />
+        <button id="nextBtn" class="gallery-nav">▶</button>
+      </div>
+      <div id="galleryThumbs" class="gallery-thumbs"></div>
+    </div>
+  </body>
+</html>

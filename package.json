@@ -1,0 +1,11 @@
+{
+  "name": "homelink",
+  "version": "0.1.0",
+  "description": "Minimal homelink demo site for property listings (ซื้อ/เช่า/ปล่อยเช่า/ปล่อยขาย)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
