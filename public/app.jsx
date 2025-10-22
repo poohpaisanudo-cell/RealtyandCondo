@@ -2,11 +2,18 @@
 const { useState } = React;
 function AppRoot() {
   const [galleryState, setGalleryState] = useState({ images: [], index: 0, open: false });
+  const [detailListing, setDetailListing] = useState(null);
   function openGallery(images, index) {
     setGalleryState({ images, index, open: true });
   }
   function closeGallery() {
     setGalleryState({ images: [], index: 0, open: false });
+  }
+  function openDetail(listing) {
+    setDetailListing(listing);
+  }
+  function closeDetail() {
+    setDetailListing(null);
   }
   return (
     <div>
@@ -29,8 +36,8 @@ function AppRoot() {
         </div>
       </header>
 
-      {/* Home component relies on ListingCard being available globally */}
-      <Home onOpenGallery={openGallery} />
+  {/* Home component relies on ListingCard being available globally */}
+  <Home onOpenGallery={openGallery} onOpenDetail={openDetail} />
 
       <footer className="site-footer">
         <div className="container">
@@ -46,6 +53,10 @@ function AppRoot() {
 
       {galleryState.open && (
         <GalleryModal images={galleryState.images} index={galleryState.index} onClose={closeGallery} />
+      )}
+
+      {detailListing && (
+        <ListingDetail listing={detailListing} onClose={closeDetail} onOpenGallery={openGallery} />
       )}
     </div>
   );

@@ -1,9 +1,16 @@
-function ListingCard({ listing, onOpenGallery }) {
+function ListingCard({ listing, onOpenGallery, onOpenDetail }) {
   const images = (listing.images && listing.images.length) ? listing.images : [listing.image || '/images/placeholder.jpg'];
   return (
-    <div className="card">
+    <div className="card" role="article" aria-label={listing.title}>
       <div className="card-media">
-        <img className="primary" src={images[0]} alt={listing.title} onError={(e) => e.target.src = '/images/placeholder.jpg'} />
+        <img
+          className="primary"
+          src={images[0]}
+          alt={listing.title}
+          onError={(e) => e.target.src = '/images/placeholder.jpg'}
+          onClick={() => onOpenDetail && onOpenDetail(listing)}
+          style={{ cursor: onOpenDetail ? 'pointer' : 'default' }}
+        />
         <div className="thumbs">
           {images.map((s, i) => (
             <img key={i} className="thumb" src={s} alt={`${listing.title} ${i + 1}`} onClick={() => onOpenGallery(images, i)} onError={(e) => e.target.src = '/images/placeholder.jpg'} />
