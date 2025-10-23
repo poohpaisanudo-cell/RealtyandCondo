@@ -232,11 +232,19 @@ main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
   margin-top: 16px;
   font-weight: 700;
   font-size: 1.25rem;
-  color: #2ECC71;
+  color: #2e9dcc;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  display: inline-block;
 }
+.price .per-unit {
+  font-size: 0.7em;   /* ขนาดประมาณ 70% ของข้อความหลัก */
+  color: #777;        /* สีเทาอ่อน */
+  margin-left: 4px;   /* เว้นห่างนิดหน่อยจากราคา */
+  vertical-align: middle;
+}
+
 
 .card:hover {
   transform: translateY(-4px);
