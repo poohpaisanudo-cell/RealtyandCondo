@@ -343,7 +343,7 @@ main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
 
 /* Responsive */
 @media (min-width:900px){
-  .cards{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:repeat(4,1fr)}
   .hero-inner{flex-direction:row;align-items:center}
   .card img{height:220px}
 }
