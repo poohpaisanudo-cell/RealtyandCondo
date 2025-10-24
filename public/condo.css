@@ -15,6 +15,16 @@ body {
   transition: var(--transition);
 }
 
+.log-in {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: #27AE60;
+  transition: var(--transition);
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
