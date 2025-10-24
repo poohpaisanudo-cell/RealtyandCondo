@@ -231,7 +231,7 @@ main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
 .price {
   margin-top: 16px;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 17px;
   color: #2e9dcc;
   display: flex;
   align-items: center;
