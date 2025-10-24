@@ -208,3 +208,4 @@ if (_searchBtn) _searchBtn.addEventListener('click', async () => {
     console.error('Initial fetch failed - keeping static content if present', err);
   }
 })();
+
