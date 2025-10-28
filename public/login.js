@@ -218,6 +218,87 @@
     const btn = $('btn-open-login'); if(btn) btn.addEventListener('click', ()=> openModal('loginModal'));
   }
 
+  // Social login configurations
+  const config = {
+      google: {
+          client_id: 'YOUR_GOOGLE_CLIENT_ID',
+          redirect_uri: 'YOUR_REDIRECT_URI'
+      },
+      facebook: {
+          app_id: 'YOUR_FACEBOOK_APP_ID',
+          redirect_uri: 'YOUR_REDIRECT_URI'
+      },
+      line: {
+          channel_id: 'YOUR_LINE_CHANNEL_ID',
+          redirect_uri: 'YOUR_REDIRECT_URI'
+      }
+  };
+
+  // Handle Google Login
+  function loginWithGoogle() {
+      const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?
+          client_id=${config.google.client_id}&
+          redirect_uri=${config.google.redirect_uri}&
+          response_type=code&
+          scope=email profile`;
+      
+      window.location.href = googleAuthUrl;
+  }
+
+  // Handle Facebook Login
+  function loginWithFacebook() {
+      FB.init({
+          appId: config.facebook.app_id,
+          cookie: true,
+          xfbml: true,
+          version: 'v12.0'
+      });
+
+      FB.login((response) => {
+          if (response.authResponse) {
+              console.log('Facebook login successful');
+              // Handle successful login
+          }
+      }, {scope: 'email'});
+  }
+
+  // Handle LINE Login
+  function loginWithLine() {
+      const lineAuthUrl = `https://access.line.me/oauth2/v2.1/authorize?
+          response_type=code&
+          client_id=${config.line.channel_id}&
+          redirect_uri=${config.line.redirect_uri}&
+          state=YOUR_STATE&
+          scope=profile openid email`;
+      
+      window.location.href = lineAuthUrl;
+  }
+
+  // Handle form login
+  async function handleFormLogin(email, password) {
+      try {
+          const response = await fetch('/api/login', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ email, password })
+          });
+
+          if (response.ok) {
+              const data = await response.json();
+              // Store auth token
+              localStorage.setItem('auth_token', data.token);
+              window.location.href = '/condo.html';
+          } else {
+              throw new Error('Login failed');
+          }
+      } catch (error) {
+          console.error('Login error:', error);
+          alert('เข้าสู่ระบบไม่สำเร็จ กรุณาลองใหม่อีกครั้ง');
+      }
+  }
+
   // Initialize
   createModals();
   wire();
