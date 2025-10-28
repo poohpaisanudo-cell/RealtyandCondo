@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeLink</title>
-    <link rel="stylesheet" href="condo.css">
-    <script src="login.js" ></script>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeLink</title>
+  <link rel="stylesheet" href="condo.css" />
+ <link rel="stylesheet" href="login.css"> <!--  login.css -->
 </head>
-<div class="Log-in">
-    <button class="Signin" id="sign-in" aria-label="login">Sign in</button>   
-  </div>
+
 <body>
-<header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="#">HomeLink</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-    <nav id="menu" class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">For Sale</a></li>
-    <div id="auth-area" class="Log-in">
-      <!-- login.js will render sign in button or user badge here -->
-      <button id="btn-open-login" class="Signin menu-toggle" aria-label="login">Sign in</button>
-    </div>
-        <li><a href="#">For Rent</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+ <div class="container header-inner">
+ <a class="brand" href="#">HomeLink</a>
+ <button class="menu-toggle" id="menuToggle" aria-label="Open menu"></button>
+ <nav id="menu" class="nav">
+ <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">For Sale</a></li>
+    <li><a href="#">For Rent</a></li>
+    <li><a href="#">Contact</a></li>
+         <li>
+        <div id="auth-area" class="Log-in">
+        <button id="btn-open-login" class=".login-buttons" aria-label="login">Sign in</button>
   </div>
-  
+  </li> 
+        </ul>
+ </nav>
+ </div>
 </header>
 
+
+<!-- ✅ Login Modal -->
+<div id="loginModal" class="login-modal">
+  <div class="login-content">
+    <button id="btn-close-login" class="close-login">✕</button>
+    <h2>เข้าสู่ระบบ / สมัครสมาชิก</h2>
+    <p>เลือกวิธีเข้าสู่ระบบของคุณ</p>
+    <div class="login-buttons">
+      <button id="googleLogin" class="btn google">Login with Google</button>
+      <button id="facebookLogin" class="btn facebook">Login with Facebook</button>
+      <button id="lineLogin" class="btn line">Login with LINE</button>
+    </div>
+  </div>
+</div>
+<!--  ส่วนอื่น (main, footer)  -->
 <main>
-  <section class="hero">
+    <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
         <h1>ค้นหาคอนโดในฝันของคุณ</h1>
@@ -68,7 +80,7 @@
         <img src="https://www.livinginsider.com/upload/topic2843/d5578f746601465ce0c491f4a0cb3e5d.jpeg" alt="Condo 2">
         <div class="card-body">
           <h3>IDEO O2</h3>
-          <p class="meta"> ศูนย์รวมไลฟ์สไตล์ของคนกรุงเทพฯตะวันออก สะดวกสบายด้วยจุดขึ้นลงทางด่วนบางนา พร้อมพื้นที่ส่วนกลางขนาดใหญ่กว่า 10 ไร่ ที่จะออกแบบมาให้พื้นที่ทุกตารางนิ้วมีความสดชื่น เต็มไปด้วยออกซิเจน และการใช้ชีวิต 365 วัน ได้ครบทุกรูปแบบ</p>
+          <p class="meta"> ศูนย์รวมไลฟ์สไตล์ของคนกรุงเทพฯตะวันออก สะดวกสบายด้วยจุดขึ้นลงทางด่วนบางนา</p>
           <p class="price">฿2,800,000<span class="per-unit">(82,353บาท/ตร.ม.)</span></p>
         </div>
       </article>
@@ -77,7 +89,7 @@
         <img src="https://img.hipcdn.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1wcm9qZWN0cy1hZG1pbi1pbWFnZXMiLCJrZXkiOiJhZjVhZTZjNS0xMDE0LTRjNjUtOTg1Mi0xMDk3M2Y1MThhYjUvYWY1YWU2YzUtMTAxNC00YzY1LTk4NTItMTA5NzNmNTE4YWI1XzcyOTM1NzBjLTNmOTUtNDAwZC1hODUwLWE4NTlkYzJkNWVmNy5qcGciLCJicmFuZCI6ImhpcGZsYXQiLCJlZGl0cyI6eyJyb3RhdGUiOm51bGwsInJlc2l6ZSI6eyJ3aWR0aCI6NDAwLCJoZWlnaHQiOjMzMCwiZml0IjoiY292ZXIifX19" alt="Condo 3">
         <div class="card-body">
           <h3>The Lake Condominium</h3>
-          <p class="meta">โครงการนี้มีจุดเด่นที่สำคัญคือบรรยากาศเงียบสงบและการได้เห็นวิวทะเลสาบเมืองทองธานี  อยู่ใกล้กับอิมแพ็ค เมืองทองธานี, ทางด่วน และในอนาคตจะมีรถไฟฟ้าสายสีชมพูส่วนต่อขยายผ่าน ทำให้การเดินทางสะดวกยิ่งขึ้น</p>
+          <p class="meta">โครงการนี้มีจุดเด่นที่สำคัญคือบรรยากาศเงียบสงบและการได้เห็นวิวทะเลสาบเมืองทองธานี</p>
           <p class="price">฿3,200,000<span class="per-unit">(40,000บาท/ตร.ม.)</span>
 </p>
         </div>
@@ -180,51 +192,15 @@
     <p>© 2025 HomeLink — เชื่อมต่อคุณกับที่อยู่อาศัยที่ใช่</p>
   </div>
 </footer>
-  <script src="login.js" defer></script>
-  <!-- Gallery modal (used by vanilla JS app.js) -->
-  <div id="galleryModal" class="gallery-modal" style="display:none" aria-hidden="true">
-    <button id="galleryClose" class="gallery-close">✕</button>
-    <div class="gallery-content">
-      <button id="prevBtn" class="gallery-nav">◀</button>
-      <img id="galleryImg" src="" alt="" />
-      <button id="nextBtn" class="gallery-nav">▶</button>
-    </div>
-    <div id="galleryThumbs" class="gallery-thumbs"></div>
-  </div>
 
-  <!-- Listing detail modal -->
-  <div id="detailModal" class="detail-modal" style="display:none" aria-hidden="true">
-    <div class="detail-panel">
-      <button id="detailClose" class="detail-close">✕</button>
-      <div class="detail-grid">
-        <div class="detail-media">
-          <img id="detailImg" src="" alt="" />
-          <div class="detail-gallery-btn">
-            <button id="detailViewGallery" class="btn primary">ดูรูปเพิ่มเติม</button>
-          </div>
-        </div>
-        <div class="detail-info">
-          <h2 id="detailTitle"></h2>
-          <p id="detailMeta" class="meta"></p>
-          <p id="detailPrice" class="price-large"></p>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-          <!-- Units / floors list (populated by app.js) -->
-          <ul id="detailUnits" class="detail-units" aria-label="Units or floors list"></ul>
+<!-- ✅ login.js (เชื่อมระบบ login) -->
+<script src="login.js" defer></script>
 
-          <!-- Per-unit detail (populated when a unit is selected) -->
-          <div id="detailUnitDetail" class="unit-detail" aria-live="polite"></div>
-
-          <p id="detailDesc"></p>
-          <div class="detail-actions">
-            <a id="detailPhone" class="btn primary" href="#">โทร</a>
-            <a id="detailEmail" class="btn" href="#">ส่งข้อความ</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-
-  <script src="app.js"></script>
+<!-- app.js ของคุณ -->
+<script src="app.js" defer></script>
 </body>
 </html>
