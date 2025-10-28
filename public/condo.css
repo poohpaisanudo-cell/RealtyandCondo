@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background: var(--accent); /* เพิ่มพื้นหลังเข้มให้ตรงกับ header */
 }
 
 .header {
@@ -13,8 +14,18 @@ body {
   z-index: 1000;
   padding: 15px 0;
   transition: var(--transition);
+  margin: 0; /* ป้องกันช่องว่างขาว */
+  border: 0;
 }
 
+.hero {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: #fff;
+  padding: 40px 0 60px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
 
 .header-content {
   display: flex;
@@ -86,16 +97,6 @@ body {
 
 main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
 
-.hero {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-  color: #fff;
-  padding: 40px 0 60px;
-  position: relative;
-  overflow: hidden;
-  margin-top: 70px;
-  
-}
-
 .hero::before {
   content: '';
   position: absolute;
@@ -159,6 +160,11 @@ main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
   border-color: rgba(255,255,255,0.3);
 }
 
+main {
+  padding-top: 86px;
+  background: var(--accent); /* เปลี่ยนจาก var(--bg) เป็น var(--accent) */
+  min-height: calc(100vh - 160px);
+}
 .search button {
   background: #2ECC71;
   color: #fff;
@@ -297,6 +303,11 @@ main{padding-top:86px;background:var(--bg);min-height:calc(100vh - 160px)}
   align-items: center;
   justify-content: center;
   z-index: 2000;
+}
+.listings {
+  background: var(--card); /* สีขาวของ card */
+  padding: 28px 16px;
+  margin-top: 0; /* ลบช่องว่างบน */
 }
 
 .detail-panel {
