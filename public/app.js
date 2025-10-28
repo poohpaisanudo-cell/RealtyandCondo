@@ -73,6 +73,14 @@ const detailUnitDetail = document.getElementById('detailUnitDetail');
 let currentDetailListing = null;
 
 function openDetail(listing) {
+  // Require authentication before showing details. If not logged in, open login modal and
+  // continue after successful login.
+  if (window.Auth && !window.Auth.isLoggedIn()) {
+    // store callback to open this detail after login
+    window.Auth.requireAuth(() => openDetail(listing));
+    return;
+  }
+
   currentDetailListing = listing;
   const images = (listing.images && listing.images.length) ? listing.images : [listing.image || '/images/placeholder.jpg'];
   // base info
