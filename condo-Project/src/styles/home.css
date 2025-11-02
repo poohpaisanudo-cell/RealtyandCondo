@@ -1,0 +1,59 @@
+.hero {
+  background-image: url("/images/city-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.property-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
