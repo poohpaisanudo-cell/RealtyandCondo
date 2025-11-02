@@ -1,15 +1,16 @@
 // src/components/PropertyCard.jsx
+import "../styles/propertycard.css";
+
 export default function PropertyCard({ title, price, location, image }) {
+  const src = image || "/images/placeholder.jpg";
   return (
-    <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-4">
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="text-gray-500">{location}</p>
-        <p className="text-blue-600 font-bold mt-2">{price}</p>
-        <button className="mt-3 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700">
-          ดูรายละเอียด
-        </button>
+    <div className="property-card">
+      <img src={src} alt={title} />
+      <div className="card-body">
+        <h4>{title}</h4>
+        <p className="location">{location}</p>
+        <p className="price">{price}</p>
+        <button className="btn-primary" style={{ marginTop: 12 }}>ดูรายละเอียด</button>
       </div>
     </div>
   );

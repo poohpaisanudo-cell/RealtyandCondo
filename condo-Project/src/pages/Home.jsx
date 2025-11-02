@@ -33,7 +33,7 @@ function Home() {
     <>
       <Header />
       <section className="hero">
-        <div className="overlay">
+        <div className="overlay container">
           <h2>ค้นหาอสังหาริมทรัพย์ในฝันของคุณ</h2>
           <p>บ้าน คอนโด และอพาร์ตเมนต์ทั่วประเทศไทย</p>
           <div className="search-bar">
@@ -48,11 +48,13 @@ function Home() {
       </section>
 
       <section className="property-section">
-        <h3>อสังหาฯ แนะนำ</h3>
-        <div className="property-grid">
-          {properties.map((item) => (
-            <PropertyCard key={item.id} {...item} />
-          ))}
+        <div className="container">
+          <h3>อสังหาฯ แนะนำ</h3>
+          <div className="property-grid">
+            {properties.map((item) => (
+              <PropertyCard key={item.id} {...item} />
+            ))}
+          </div>
         </div>
       </section>
 

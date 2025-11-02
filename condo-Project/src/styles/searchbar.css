@@ -1,0 +1,14 @@
+/* Search box styles */
+.search-box {
+  background: var(--surface);
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+}
+
+.search-box input,
+.search-box select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}

@@ -1,3 +1,31 @@
+# RealtyandCondo — Condo Project (Demo)
+
+Simple React demo for a real-estate listing app (minimal, client-side mock). Built for a school assignment.
+
+Features included:
+- Home, Listings, Property Detail
+- Login / Register (mocked, stored in localStorage)
+- Dashboard (protected)
+- Create Listing (adds to in-memory mock list)
+
+Run locally (PowerShell-safe):
+
+```powershell
+cd 'c:\Momeam\Project\RealtyandCondo\condo-Project'
+# If PowerShell blocks npm scripts, use the npm.cmd shim:
+npm.cmd install
+npm.cmd run dev
+# OR relax execution policy for current session then run npm normally:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+npm install
+npm run dev
+```
+
+Then open the URL printed by the dev server (typically http://localhost:5173).
+
+Notes:
+- This project uses in-memory mock services (`src/services/properties.js`). Data added via Create Listing will persist only during the running session.
+- Auth is mocked (`src/context/AuthContext.jsx`) and saved in `localStorage` for demo purposes.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
